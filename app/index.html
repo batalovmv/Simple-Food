@@ -9,7 +9,50 @@
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <a class="logo" href="#">
+          <span class="logo__left">Simple</span>
+          <span class="logo__right">Food</span>
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Главная</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Блюда</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="user-nav">
+            <button type="button" class="user-nav__link" href="#">
+              <img src="images/icons/search.svg" alt="поиск">
+            </button>
+            <button type="button" class="user-nav__link" href="#">
+              <img class="num" src="images/icons/cart.svg" alt="корзина">
+              <div class="user-nav__num">4</div>
+            </button>
+          </div>
+        </nav>
 
+      </div>
+      <div class="header__inner">
+        <div class="header__inner-box">
+          <h1 class="header__inner-title">Доставка<span>За 15 минут</span></h1>
+          <p class="header__inner-discription">Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+          <div class="header__inner-links">
+            <button class="header__inner-order" type="button">Заказать</button>
+            <a class="header__inner-more" href="#">Подробнее</a>
+          </div>
+        </div>
+        <img class="header__inner-img" src="images/Scooter-Guy.jpg" alt="парень на скутере">
+      </div>
+    </div>
+  </header>
 
   <script src="js/main.min.js"></script>
 </body>
