@@ -4,7 +4,8 @@ body {
   font-style: normal;
   font-weight: 400;
   color: $dark;
-  
+  background-color: $silver-100;
+
 }
 
 button {
@@ -16,12 +17,35 @@ button {
   cursor: pointer;
 }
 
-a{
+a {
   color: $dark;
 }
 
+section{
+  margin: 60px 0;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+svg path {
+  fill: inherit;
+  stroke: inherit;
+  stroke-width: inherit;
+}
+
+.mixitup-control-active {
+  background-color: #FF6838;
+  border-radius: 5px;
+  fill: white;
+  color: white;
+  }
+
+.title{
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  color: $darkBlue-900;
 }
