@@ -7,7 +7,23 @@ body {
   background-color: $silver-100;
 
 }
+.animation {
+  transition: color 0.4s, outline 0.4s, border 0.4s, text-shadow 0.4s;
 
+  &:hover {
+    color: $orange-900;
+  }
+
+  &:focus {
+    outline: 2px solid $orange-900;
+    border-radius: 5px;
+    color: $dark;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
 button {
   padding: 0;
   border: none;
@@ -34,6 +50,27 @@ svg path {
   fill: inherit;
   stroke: inherit;
   stroke-width: inherit;
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .mixitup-control-active {

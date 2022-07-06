@@ -14,7 +14,6 @@
 }
 
 .logo {
-  padding: 1px;
   transition: opacity 0.4s, outline 0.4s, color 0.4s, ease-in-out;
   letter-spacing: 0.043em;
   font-weight: 500;
@@ -38,6 +37,7 @@
 
   &__left {
     color: $orange-900;
+    margin-right: -10px;
   }
 }
 
@@ -50,27 +50,7 @@
   margin-right: 62px;
   align-items: center;
 
-  &-link {
-    transition: color 0.4s, outline 0.4s, text-shadow 0.4s;
-    padding: 2px;
-
-    &:hover {
-      color: $orange-900;
-    }
-
-    &:focus {
-      outline: 2px solid $orange-900;
-      border-radius: 5px;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
-
-
-  }
-
-  &-item:not(:last-child) {
+    &-item:not(:last-child) {
     margin-right: 45px;
   }
 }
@@ -190,24 +170,12 @@
     }
   }
 
-  &-more {
-    transition: color 0.4s, outline 0.4s, border 0.4s, text-shadow 0.4s;
+  
 
-    &:hover {
-      color: $orange-900;
-    }
+}
 
-    &:focus {
-      outline: 2px solid $orange-900;
-      border-radius: 5px;
-      color: $dark;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
-  }
-
+.popular-categories {
+  text-align: center;
 }
 
 .popular-categories .title {
@@ -295,10 +263,8 @@
       text-decoration-line: underline;
       font-size: 20px;
       line-height: 150%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
+      padding: 10px;
+
     }
 
     &-discription {
@@ -330,7 +296,6 @@
       margin: 0;
     }
   }
-
 }
 
 .btn__tobasket {
@@ -342,7 +307,135 @@
   border-radius: 5px;
 }
 
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  fill: #fff;
 
+  .logo {
+    text-shadow: none;
+    margin-bottom: 30px;
+  }
+
+  &__form-input {
+    padding: 13px 15px;
+    max-width: 200px;
+    margin-bottom: 12px;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    transition: opacity 0.4s, color 0.4s, outline-color 0.4s, ;
+    outline-color: transparent;
+
+    &::placeholder {
+      font-size: 14px;
+      opacity: 0.9;
+      color: $gray;
+    }
+
+    &:hover::placeholder {
+      opacity: 1;
+      color: $darkBlue-900;
+
+    }
+
+    &:focus {
+      outline-color: $orange-900;
+    }
+  }
+
+  .subscribe {
+    padding: 13px 38px;
+    background-color: $orange-900;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: backgroud-color 0.4s, color 0.4s, box-shadow 0.4s, fill 0.4s, border-color 0.4s ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+      color: $orange-900;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      fill: $orange-900;
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+
+    svg {
+      fill: inherit;
+      margin-right: 15px;
+    }
+  }
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .messengers {
+    display: flex;
+    flex-direction: line;
+
+    li {
+      margin-right: 13px;
+      position: relative;
+    }
+
+    &__circle {
+      width: 39px;
+      height: 39px;
+      background-color: $silver-200;
+      border-radius: 50%;
+      fill: $dark;
+
+      &:hover {
+        background-color: $orange-900;
+        fill: #fff;
+      }
+
+      &:focus {
+        background-color: #FFF2ED;
+        fill: $dark;
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      } // focus отказывается работать
+
+      &:active {
+        background-color: #FFF2ED;
+        fill: $orange-900;
+      }
+
+      svg {
+
+        position: absolute;
+
+        fill: inherit;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
 
 
 
