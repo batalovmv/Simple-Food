@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>start html</title>
+  <title>Simple Food / Главная страница</title>
+  <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -12,10 +13,9 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
-        <a class="logo" href="#">
-          <span class="logo__left">Simple</span>
-          <span class="logo__right">Food</span>
-        </a>
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/icons/logo.svg" alt="логотип сайта">
+          </a>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
@@ -331,9 +331,8 @@
       <div class="container">
         <div class="footer__inner">
           <div class="logo-box">
-            <a href="#" class="logo">
-              <span class="logo__left">Simple</span>
-              <span class="logo__right">Food</span>
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/icons/logo-footer.svg" alt="логотип сайта">
             </a>
             <input class="logo-box__form-input" id="email" name="email" type="email" required placeholder="Ваш email">
             <button class="subscribe" type="button">
@@ -365,7 +364,7 @@
           </ul>
           <ul class="about">
             <li class="about__link">
-              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              <a class="link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g id="Iconly/Light/Location">
                     <g id="Location">
@@ -380,7 +379,7 @@
                 </svg>ул. Т.Г.Шевченко, 1</a>
             </li>
             <li class="about__link">
-              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              <a class="link" href=tel:+380501112233"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g id="Iconly/Light/Calling">
                     <g id="Calling">
@@ -397,7 +396,7 @@
                 380501112233</a>
             </li>
             <li class="about__link">
-              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              <a class="link" href="mailto:support@sfood.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g id="Iconly/Light/Message">
                     <g id="Message">
