@@ -50,7 +50,7 @@
   margin-right: 62px;
   align-items: center;
 
-    &-item:not(:last-child) {
+  &-item:not(:last-child) {
     margin-right: 45px;
   }
 }
@@ -62,22 +62,32 @@
   &__link {
     padding: 10px;
     display: inherit;
-    transition: outline 0.4s, background-color 0.4s;
+    transition: outline 0.4s, background-color 0.4s, stroke 0.4s;
+    stroke: $dark;
 
     &:hover {
       background-color: $orange-900;
       border-radius: 5px;
-      //не заменяется цвет на белый
+      stroke: #fff;
     }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
       outline: 2px solid $orange-900;
       border-radius: 5px;
+      stroke: $dark;
     }
 
     &:active {
       border-radius: 0;
+    }
+
+    svg {
+      stroke: inherit;
+
+      ellipse {
+        stroke: inherit;
+      }
     }
   }
 
@@ -91,6 +101,7 @@
   }
 
   &__num {
+    content: '';
     position: absolute;
     left: 24px;
     bottom: 22px;
@@ -98,10 +109,11 @@
     font-size: 10px;
     color: #fff;
     padding: 1px 4px;
-    background-color: $orange-900;
+    background-color: $orange-900; // пока не придумал как сделать смену цвета кружка с цифрой 4
     border-radius: 100%;
 
   }
+
 }
 
 .header__inner {
@@ -170,7 +182,7 @@
     }
   }
 
-  
+
 
 }
 
@@ -375,9 +387,22 @@
   }
 }
 
-.footer__inner {
-  display: flex;
-  justify-content: space-between;
+.footer {
+  &__bottom {
+    border-top: 1px solid $gray;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .about {
@@ -391,6 +416,12 @@
   &__link {
     flex-direction: column;
     margin-bottom: 15px;
+    stroke: $dark;
+
+    SVG {
+      stroke: inherit;
+      margin-right: 7px;
+    }
   }
 
   .messengers {
@@ -418,7 +449,9 @@
         background-color: #FFF2ED;
         fill: $dark;
         box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      } // focus отказывается работать
+      }
+
+      // focus отказывается работать
 
       &:active {
         background-color: #FFF2ED;
@@ -426,9 +459,7 @@
       }
 
       svg {
-
         position: absolute;
-
         fill: inherit;
         left: 50%;
         transform: translate(-50%, 50%);
