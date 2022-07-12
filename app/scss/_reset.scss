@@ -49,6 +49,14 @@ select {
   font: inherit;
 }
 
+button {
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
 a {
   text-decoration: none;
 }
